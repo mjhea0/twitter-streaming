@@ -1,6 +1,7 @@
 # dependencies
 import sys
 import tweepy
+import time
 
 # authentication settings 
 consumer_key	= "ADD YOUR KEY"
@@ -34,6 +35,10 @@ class StreamListener(tweepy.StreamListener):
         print >> sys.stderr, 'Timeout...'
         return True # continue listening
 
-# instantiate 
+# instantiation
 twitterStream = tweepy.streaming.Stream(auth, StreamListener())
+
+# measure process time
+timer = time.clock()
 TwitterStream.filter(track=['TrickOrTreat'])
+print time.clock() - timer, ' seconds process time'
