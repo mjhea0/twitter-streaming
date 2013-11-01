@@ -4,7 +4,7 @@ import tweepy
 import time
 
 # authentication settings 
-consumer_kek    = "ADD YOUR KEY"
+consumer_key    = "ADD YOUR KEY"
 consumer_secret = "ADD YOUR KEY"
 access_token    = "ADD YOUR KEY"
 access_secret   = "ADD YOUR KEY" 
