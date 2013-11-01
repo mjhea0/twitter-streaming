@@ -4,10 +4,10 @@ import tweepy
 import time
 
 # authentication settings 
-consumer_key	= "ADD YOUR KEY"
-consumer_secret	= "ADD YOUR KEY"
-access_token 	= "ADD YOUR KEY"
-access_secret 	= "ADD YOUR KEY" 
+consumer_ke     = "ADD YOUR KEY"
+consumer_secret = "ADD YOUR KEY"
+access_token    = "ADD YOUR KEY"
+access_secret   = "ADD YOUR KEY" 
  
 # authenticate 
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
@@ -16,16 +16,15 @@ api = tweepy.API(auth)
  
 # listen handler
 class StreamListener(tweepy.StreamListener):
-	
-	# print raw data
-	def on_data(self, data):
-		print data
+    # print raw data
+    def on_data(self, data):
+        print data
 
     # print out tweet
     def on_status(self, status):
         print status.text
  
- 	# print error
+    # print error
     def on_error(self, status_code):
         print >> sys.stderr, 'Error status code: ', status_code
         return True # continue listening
